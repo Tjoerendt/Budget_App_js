@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Budget Allocation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Monthly Budget Allocator</h1>
+
+  <label for="income">Monthly Income: $</label>
+  <input type="number" id="income" placeholder="Enter income" required>
+  <button onclick="setIncome()">Set Income</button>
+
+  <h2>Add Budget Category</h2>
+  <form id="category-form">
+    <input type="text" id="cat-name" placeholder="Category" required>
+    <input type="number" id="cat-percent" placeholder="Percent (%)" required>
+    <button type="submit">Add Category</button>
+  </form>
+
+  <h2>Allocation</h2>
+  <ul id="allocations"></ul>
+
+  <h3>Total Allocated: <span id="total-percent">0%</span></h3>
+  <h3>Unallocated: <span id="remaining-percent">100%</span></h3>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
